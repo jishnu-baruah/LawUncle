@@ -94,7 +94,7 @@ const RoomScreen = ({ route }) => {
 
   const onDisconnect = () => {
     leaveRoom();
-    navigation.navigate('Login');
+    navigation.navigate('Home');
   };
 
   const mePeer = {
