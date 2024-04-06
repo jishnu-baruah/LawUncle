@@ -8,6 +8,7 @@ import HomeScreen from './screens/HomeScreen';
 import ChatScreen from './screens/ChatScreen';
 import LawyerScreen from './screens/LawyerScreen';
 import LoginScreen from './screens/login';
+import ForumScreen from './screens/ForumScreen';
 
 export type RootStackParamList = {
     Home: undefined;
@@ -17,6 +18,7 @@ export type RootStackParamList = {
     Lawyer: undefined;
     Room: undefined;
     Lobby: undefined;
+    Forum: undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -31,6 +33,7 @@ export default function Navigation() {
             <Stack.Screen name="Lawyer" component={LawyerScreen} />
             <Stack.Screen name="Room" component={RoomScreen} />
             <Stack.Screen name="Lobby" component={LobbyScreen} />
+            <Stack.Screen name="Forum" component={ForumScreen} />
         </Stack.Navigator>
     );
 }

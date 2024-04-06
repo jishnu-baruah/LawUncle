@@ -3,6 +3,7 @@ import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../navigation';
 import Carousal from '../components/Carousal';
+// import AudioAssistant from '../components/AudioAssistant';
 
 type HomeScreenNavigationProp = NativeStackNavigationProp<RootStackParamList, 'Home'>;
 
@@ -15,7 +16,14 @@ const HomeScreen = ({ navigation }: Props) => {
         <View style={styles.container}>
             <View style={styles.header}>
                 <Text style={styles.headerTitle}>Home</Text>
+                <TouchableOpacity
+                style={styles.forumButton}
+                    onPress={() => navigation.navigate('Forum')}
+                >
+                    <Text>Forum</Text>
+                </TouchableOpacity>
             </View>
+            {/* <AudioAssistant/> */}
             {/* <Carousal /> */}
             <Text style={styles.heading}>Choose an option:</Text>
             <TouchableOpacity
@@ -29,7 +37,7 @@ const HomeScreen = ({ navigation }: Props) => {
             </TouchableOpacity>
             <TouchableOpacity
                 style={styles.card}
-                onPress={() => navigation.navigate('HLogin')}
+                onPress={() => navigation.navigate('Lawyer')}
             >
                 <Text style={styles.cardTitle}>Lawyer</Text>
                 <Text style={styles.cardDescription}>
@@ -49,13 +57,23 @@ const styles = StyleSheet.create({
         paddingBottom: 10,
         backgroundColor: '#246BFD',
         alignItems: 'center',
+        justifyContent: 'space-between', // Align items along the main axis with space in between
         marginBottom: 30,
+        flexDirection: 'row',
+        textAlign:"center"
     },
     headerTitle: {
         fontSize: 24,
         fontWeight: 'bold',
         color: '#FFFFFF',
+        alignSelf: 'center', // Align the text itself to the center
+        flex: 1,
+        marginHorizontal:10
     },
+    forumButton: {
+        marginRight: 10, // Add margin to create space between "Home" and "Forum" button
+    },
+
     heading: {
         fontSize: 20,
         fontWeight: 'bold',

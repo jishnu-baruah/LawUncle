@@ -103,7 +103,7 @@ const HLoginScreen = () => {
       <SafeAreaView />
       <View >
         <View style={styles.header}>
-          <Text style={styles.headerTitle}>Connect with a lawyer</Text>
+          <Text style={styles.headerTitle}>Connect with your lawyer</Text>
         </View>
         <KeyboardAwareScrollView style={{ marginTop: 20, marginHorizontal: 20 }} bounces={false}>
         
