@@ -27,7 +27,9 @@ After setting the constants, you can use them in your project for API calls or a
 Once the dependencies are installed, you can run the following command to start the application:
 
 ```bash
-npm run
+npm start
+//or
+npx react-native start
 ```
 
 After the Metro bundler starts, use the following commands:
