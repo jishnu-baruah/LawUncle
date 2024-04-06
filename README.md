@@ -39,6 +39,3 @@ After the Metro bundler starts, use the following commands:
 
 Please replace the placeholder strings in the constants with your actual API keys and project ID.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
